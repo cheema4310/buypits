@@ -27,35 +27,41 @@ export default function Navbar() {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>Pits</a>
+                <a>Fitness</a>
                 <ul className="p-2">
                   <li>
-                    <a>Submenu 1</a>
+                    <a>Activewear</a>
                   </li>
                   <li>
-                    <a>Submenu 2</a>
+                    <a>Gear</a>
+                  </li>
+                  <li>
+                    <a>Apparel</a>
                   </li>
                 </ul>
               </li>
               <li>
-                <a>Parent</a>
+                <a>Nutrition</a>
                 <ul className="p-2">
                   <li>
-                    <a>Submenu 1</a>
+                    <a>Weight Management</a>
                   </li>
                   <li>
-                    <a>Submenu 2</a>
+                    <a>Nutrition Facts</a>
+                  </li>
+                  <li>
+                    <a>Diets</a>
                   </li>
                 </ul>
               </li>
               <li>
-                <a>Parent</a>
+                <a>Tools</a>
                 <ul className="p-2">
                   <li>
-                    <a>Submenu 1</a>
+                    <a>BMI Calculator</a>
                   </li>
                   <li>
-                    <a>Submenu 2</a>
+                    <a>Body-Fat Percentage Calculator</a>
                   </li>
                 </ul>
               </li>
@@ -72,7 +78,7 @@ export default function Navbar() {
         {/* Desktop Navbar */}
 
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1 z-50">
             <li>
               <details>
                 <summary>Fitness</summary>
@@ -100,7 +106,7 @@ export default function Navbar() {
                     <a>Nutrition Facts</a>
                   </li>
                   <li>
-                    <a>Meal Plans</a>
+                    <a>Diets</a>
                   </li>
                 </ul>
               </details>
@@ -123,9 +129,9 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
+        {/* <div className="navbar-end">
           <a className="btn">Button</a>
-        </div>
+        </div> */}
       </div>
     </div>
   );

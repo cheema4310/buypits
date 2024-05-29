@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
+// import connectDB from '@/lib/connectDB';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -11,6 +12,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  // connectDB();
   return (
     <html lang="en">
       <body data-theme="lofi" className={inter.className}>
