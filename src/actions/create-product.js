@@ -2,6 +2,7 @@
 
 import connectDB from '@/lib/connectDB';
 import Product from '@/models/Product';
+import { redirect } from 'next/navigation';
 
 export async function createProduct({ message }, formData) {
   // Parsing comma separated string into an array
@@ -42,16 +43,13 @@ export async function createProduct({ message }, formData) {
       rating,
     });
 
-    // Converting the Mongoose document to a plain object and then to a JSON-serializable object
-    const productObject = JSON.parse(JSON.stringify(newProduct.toObject()));
-
     // saving the product
     newProduct.save();
     // revalidate the path here if needed
-
-    return productObject;
   } catch (error) {
     console.log(error);
     return { message: 'error creating product' };
   }
+  // redirect to the products page
+  redirect('/');
 }

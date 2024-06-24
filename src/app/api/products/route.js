@@ -25,45 +25,45 @@ export async function GET() {
   }
 }
 
-export async function POST(request) {
-  await connectDB();
+// export async function POST(request) {
+//   await connectDB();
 
-  const {
-    name,
-    category,
-    description,
-    image,
-    affLink,
-    price,
-    pros,
-    cons,
-    features,
-    rating,
-  } = await request.json();
+//   const {
+//     name,
+//     category,
+//     description,
+//     image,
+//     affLink,
+//     price,
+//     pros,
+//     cons,
+//     features,
+//     rating,
+//   } = await request.json();
 
-  const product = new Product({
-    name,
-    category,
-    description,
-    image,
-    affLink,
-    price,
-    pros,
-    cons,
-    features,
-    rating,
-  });
-  try {
-    await product.save();
-    return NextResponse.json({ data: product });
-  } catch (error) {
-    console.error(error);
-    return NextResponse.json(
-      { error: 'Error creating product' },
-      { status: 500 }
-    );
-  }
-}
+//   const product = new Product({
+//     name,
+//     category,
+//     description,
+//     image,
+//     affLink,
+//     price,
+//     pros,
+//     cons,
+//     features,
+//     rating,
+//   });
+//   try {
+//     await product.save();
+//     return NextResponse.json({ data: product });
+//   } catch (error) {
+//     console.error(error);
+//     return NextResponse.json(
+//       { error: 'Error creating product' },
+//       { status: 500 }
+//     );
+//   }
+// }
 
 export async function DELETE(request) {
   await connectDB();
