@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body data-theme="lofi" className={inter.className}>
-        <div className="bg-base-200 grid grid-rows-[auto_1fr_auto] h-screen">
+        <div className="bg-base-200 grid grid-rows-[auto_1fr_auto] h-full">
           <Navbar />
           {children}
           <Footer />

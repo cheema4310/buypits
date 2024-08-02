@@ -11,7 +11,7 @@ export async function GET() {
   } catch (error) {
     return NextResponse.json(
       {
-        message: 'An error occurred while fetching products',
+        message: 'An error occurred while fetching articles',
         error: error.message,
       },
       { status: 500 }

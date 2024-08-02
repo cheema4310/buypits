@@ -22,6 +22,7 @@ export default function Navbar() {
                 />
               </svg>
             </div>
+
             <ul
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
@@ -70,6 +71,7 @@ export default function Navbar() {
               </li>
             </ul>
           </div>
+
           <Link href="/" className="btn btn-ghost text-xl">
             Buypits
           </Link>
